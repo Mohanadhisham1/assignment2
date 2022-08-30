@@ -10,43 +10,23 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(),
-        drawer: Drawer(),
-        body: Column(
-          children: [
-            Container(
+        home: Scaffold(
+            appBar: AppBar(),
+            drawer: Drawer(),
+            body: Container(
               decoration: BoxDecoration(
-                border: Border.all(color: Colors.orange, width: 25),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.white,
-                    spreadRadius: 10,
-                    blurRadius: 100,
-                    offset: Offset(50, 60),
-                  ),
-                  BoxShadow(
-                    color: Colors.yellow,
-                    spreadRadius: 20,
-                    blurRadius: 0,
-                    offset: Offset(3, 5),
-                  ),
-                ],
-                color: Colors.green,
-              ),
-              alignment: Alignment.topCenter,
-              padding: EdgeInsets.only(top: 50),
-              margin: EdgeInsets.only(left: 30, right: 30),
-              child: Text(
-                "hello i am mohanad",
-                style: TextStyle(
-                  fontSize: 50,
+                  color: Colors.pinkAccent,
+                  borderRadius: BorderRadius.circular(60)),
+              child: Card(
+                margin: EdgeInsets.all(100),
+                shadowColor: Colors.yellow,
+                elevation: 30,
+                color: Colors.greenAccent,
+                child: Text(
+                  "My name is Mohanad",
+                  style: TextStyle(fontSize: 40, color: Colors.blueGrey),
                 ),
               ),
-            ),
-          ],
-        ),
-      ),
-    );
+            )));
   }
 }
